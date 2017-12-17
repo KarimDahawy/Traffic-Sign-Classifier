@@ -4,6 +4,9 @@
 -----------
 The Purpose of this project is to build a deep neural network based on a modified version of Lenet architecture that will be able to recognize German Traffic Signs.
 
+# **Traffic Sign Classifier** 
+------------------------------------
+
 ## Traffic Sign Classifier Project
 ----------------------------------
 
@@ -55,38 +58,47 @@ signs data set:
 
 **Visualization of the dataset:**
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. I have plotted a sample of each image to identify what each label refers to:
 
 ![alt text][image1]
 
+Here's a bar chart showing the count of each image in the training set Data:
 
 ![alt text][image2]
+
+Here's a bar chart showing the count of each image in the Validation set Data:
+
 ![alt text][image3]
+
+Here's a bar chart showing the count of each image in the Testing set Data:
+
 ![alt text][image4]
-### Design and Test a Model Architecture
-
-#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
-
-As a first step, I decided to convert the images to grayscale because ...
-
-Here is an example of a traffic sign image before and after grayscaling.
 
 
+### 3. Design and Test a Model Architecture
+--------------------------------------------
 
-As a last step, I normalized the image data because ...
+**Pre-process the Data set:**
 
-I decided to generate additional data because ... 
+As a first step, I decided to convert the images to grayscale, So Color won't be a factor in identifying the image and will help in pre processing the images in a easier way
 
-To add more data to the the data set, I used the following techniques because ... 
+Here is an example of a Training Data set after grayscaling.
 
-Here is an example of an original image and an augmented image:
+![alt text][image5]
 
-![alt text][image3]
+Here is an example of a Validation Data set after grayscaling.
 
-The difference between the original data set and the augmented data set is the following ... 
+![alt text][image6]
+
+Here is an example of a Testing Data set after grayscaling.
+
+![alt text][image7]
+
+As a last step, I normalize all the data sets (Training,Validation and Testing), So all the data sets will have zero mean and equal standard deviation.
 
 
-#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+
+**Model Architecture:**
 
 My final model consisted of the following layers:
 
@@ -182,3 +194,5 @@ For the second image ...
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+
+
