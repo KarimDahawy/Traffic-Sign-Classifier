@@ -4,9 +4,6 @@
 -----------
 The Purpose of this project is to build a deep neural network based on a modified version of Lenet architecture that will be able to recognize German Traffic Signs.
 
-# **Traffic Sign Classifier** 
-------------------------------------
-
 ## Traffic Sign Classifier Project
 ----------------------------------
 
@@ -194,7 +191,7 @@ Here are the results of the prediction:
 | No passing			| No passing      							|
 
 
-The model was able to correctly guess 19 of the 21 traffic signs, which gives an accuracy of 90.476%. The model has miss classifeied **End of speed limit (80km/h)**) and **Speed limit (100km/h)**	by **Speed limitt (30km/h)**
+The model was able to correctly guess 19 of the 21 traffic signs, which gives an accuracy of 90.476%. The model has misclassified **End of speed limit (80km/h)** and **Speed limit (100km/h)** by **Speed limitt (30km/h)**. I have a justification for both, First **End of speed limit (80km/h)** the line over the 80 has hidden some info which made the model thinks that's 30 instead and the prove for that is the sign of **speed limit (80 km/h)** is detected correctly. For **Speed limit (100km/h)** we can see how close the 1 and 0 that if they are migrated together can result in number 3 that's why it has been classified as **Speed limit (30 km/h)**.
 
 ### 5. softmax probabilities for each prediction:
 --------------------------------------------------
