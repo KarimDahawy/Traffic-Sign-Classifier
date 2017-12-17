@@ -94,6 +94,8 @@ As a last step, I normalize all the data sets (Training,Validation and Testing),
 
 **Model Architecture:**
 
+As LeNet is a recommended Model for identifying traffic signs, I have used a modified version of LeNet in my Neural Network to achieve the required validation accuracy.
+
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -119,40 +121,40 @@ My final model consisted of the following layers:
 | Fully Connected				| Input = 84, Output = 43        									|
 
 
-#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+**Train the Model**
 
-To train the model, I used an ....
+I have used the following parameters in order to train my model:
 
-#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
+1. Arguments used for tf.truncated_normal to define weights:
+   * **mu = 0**
+   * **sigma = 0.1**
+2. Adam Optimizer with Learning rate = **0.0005**
+3. Number Of EPOCHS = **20**
+4. Batch Size = **128**
+5. Dropout with keep_prob = **0.5**
+
+
+**Model Solution Approach**
+
+First I have used LeNet architecture in order to build my pipeline, but as the validation accuracy given by LeNet was below 93%, I have made some modifications to LeNet so the validation accracy will be Higher.
+
+I have added a new convoulation layer and increased the number of filters in the first layer so I can extract as much feature as I can. then after concatenating the data after the three convoulation layers I have added some dropouts in order to decrease the number of features and avoid overfitting.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+* training set accuracy of **99.9%**
+* validation set accuracy of **98%** 
+* test set accuracy of **95.5%**
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
+A Chart to identify the training accuracy versus validation accuracy
+![alt text][image8]
 
-### Test a Model on New Images
+### 4. Test a Model on New Images:
+----------------------------------
 
-#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+**New Images for German Traffic Signs**
 
-Here are five German traffic signs that I found on the web:
-
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
-
-The first image might be difficult to classify because ...
+![alt text][image9] 
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
