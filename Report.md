@@ -154,7 +154,9 @@ A Chart to identify the training accuracy versus validation accuracy
 
 **New Images for German Traffic Signs**
 
-![alt text][image9] 
+![alt text][image9]
+
+I have loaded 21 images in order to fully test the model for different types of signs.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -162,12 +164,30 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (20km/h)      		| Speed limit (20km/h)  									| 
+| Right-of-way at the next intersection     			| Right-of-way at the next intersection										|
+| Priority road					| Priority road											|
+| Stop	      		| Stop					 				|
+| No entry			| No entry      							|
+| Dangerous curve to the left			| Dangerous curve to the left      							|
+| Speed limit (50km/h)			| Speed limit (50km/h)      							|
+| Bumpy road			| Bumpy road      							|
+| Road work		| Road work     							|
+| Children crossing			| Children crossing      							|
+| Bicycles crossing			| Bicycles crossing      							|
+| Speed limit (60km/h)			| Speed limit (60km/h)      							|
+| Ahead only			| Ahead only     							|
+| Go straight or right			| Go straight or right      							|
+| Go straight or left			| Go straight or left      							|
+| Keep right			| Keep right      							|
+| Roundabout mandatory			| Roundabout mandatory      							|
+| Speed limit (80km/h)			| Speed limit (80km/h)      							|
+| End of speed limit (80km/h)			| Speed limitt (30km/h)      							|
+| Speed limit (100km/h)			| Speed limit (30km/h)      							|
+| No passing			| No passing      							|
 
+
+![alt text][image11]
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
