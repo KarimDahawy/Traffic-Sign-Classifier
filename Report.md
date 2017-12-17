@@ -1,10 +1,11 @@
-# **Traffic Sign Recognition** 
+# **Traffic Sign Classifier** 
+------------------------------------
+## Overview
+-----------
+The Purpose of this project is to build a deep neural network based on a modified version of Lenet architecture that will be able to recognize German Traffic Signs.
 
-## Writeup
-
-### You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
-
----
+## Project
+----------
 
 **Build a Traffic Sign Recognition Project**
 
@@ -14,7 +15,6 @@ The goals / steps of this project are the following:
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
 
 
 [//]: # (Image References)
@@ -27,16 +27,6 @@ The goals / steps of this project are the following:
 [image6]: ./examples/placeholder.png "Traffic Sign 3"
 [image7]: ./examples/placeholder.png "Traffic Sign 4"
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
-
-## Rubric Points
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
-
----
-### Writeup / README
-
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
-
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -86,16 +76,25 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
- 
+| Input         		| 32x32x1 GrayScale image   							| 
+| Convolution 5x5     	| 1x1 stride, Valid padding, outputs 28x28x45 	|
+| RELU					|	Activation Function											|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x45 				|
+| Convolution 5x5     	| 1x1 stride, Valid padding, outputs 10x10x90 	|
+| RELU					|	Activation Function											|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x90 				|
+| Convolution 3x3     	| 1x1 stride, Valid padding, outputs 3x3x270 	|
+| RELU					|	Activation Function											|
+| Max pooling	      	| 2x2 stride,  outputs 2x2x270 				|
+| Flatten	    | Flatten layer3 (2*2*270) ----> 1080      									|
+| Dropout		| Keep probability = 0.5        									|
+| Fully Connected				| Input = 1080, Output = 120        									|
+| RELU					|	Activation Function											|
+| Dropout		| Keep probability = 0.5        									|
+| Fully Connected				| Input = 120, Output = 84        									|
+| RELU					|	Activation Function											|
+| Dropout		| Keep probability = 0.5        									|
+| Fully Connected				| Input = 84, Output = 43        									|
 
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
