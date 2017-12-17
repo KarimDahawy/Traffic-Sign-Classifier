@@ -4,44 +4,56 @@
 -----------
 The Purpose of this project is to build a deep neural network based on a modified version of Lenet architecture that will be able to recognize German Traffic Signs.
 
-## Project
-----------
+## Traffic Sign Classifier Project
+----------------------------------
 
-**Build a Traffic Sign Recognition Project**
+**The goals of this project are the following:**
 
-The goals / steps of this project are the following:
-* Load the data set (see below for links to the project data set)
-* Explore, summarize and visualize the data set
-* Design, train and test a model architecture
-* Use the model to make predictions on new images
-* Analyze the softmax probabilities of the new images
+    1. Load the data set.
 
+    2. Explore, summarize and visualize the data set.
+
+    3. Design, train and test a model architecture.
+
+    4. Use the model to make predictions on new images.
+
+    5. Analyze the softmax probabilities of the new images.
 
 [//]: # (Image References)
 
-[image1]: ./examples/visualization.jpg "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./examples/placeholder.png "Traffic Sign 1"
-[image5]: ./examples/placeholder.png "Traffic Sign 2"
-[image6]: ./examples/placeholder.png "Traffic Sign 3"
-[image7]: ./examples/placeholder.png "Traffic Sign 4"
-[image8]: ./examples/placeholder.png "Traffic Sign 5"
+[image1]: ./examples/1.Visualization_of_the_dataset.png
+[image2]: ./examples/2.Training_Data.png
+[image3]: ./examples/3.Validation_Data.png
+[image4]: ./examples/4.Testing_Data.png
+[image5]: ./examples/5.Preprocess_the_Training_Data.png
+[image6]: ./examples/6.Preprocess_the_Validation_Data.png
+[image7]: ./examples/7.Preprocess_the_Testing_Data.png
+[image8]: ./examples/8.Training_Accuracy_Vs_Validation_Accuracy.png
+[image9]: ./examples/9.New_Loaded_images.png
+[image10]: ./examples/10.Preprocessed_new_loaded_images.png
+[image11]: ./examples/11.Top_5_Softmax_Probabilities.png
+[image12]: ./examples/12.Plot_Top_5_Softmax_Probabilities.png
 
-### Data Set Summary & Exploration
+### 1. Load the Data
+-----------------
+I have seprated the training, validation and testing data set in 3 different folders and then loaded them using pickle python library in the following train,valid and test. then I separate the data into features and labels.
 
-#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+### 2. Data Set Summary & Exploration
+----------------------------------
 
-I used the pandas library to calculate summary statistics of the traffic
+**Basic summary of the data set:**
+
+I used the pandas library and python to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
-* The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+   1. The size of training set is **34799 samples**
+   2. The size of the validation set is **4410 samples**
+   3. The size of test set is **12630 samples**
+   4. The shape of a traffic sign image is **(32, 32, 3)**
+   5. The number of unique classes/labels in the data set is **43**
 
-#### 2. Include an exploratory visualization of the dataset.
+
+**Visualization of the dataset:**
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
 
@@ -86,7 +98,7 @@ My final model consisted of the following layers:
 | Convolution 3x3     	| 1x1 stride, Valid padding, outputs 3x3x270 	|
 | RELU					|	Activation Function											|
 | Max pooling	      	| 2x2 stride,  outputs 2x2x270 				|
-| Flatten	    | Flatten layer3 (2*2*270) ----> 1080      									|
+| Flatten	    | Flatten layer3 (2x2x270) ----> 1080      									|
 | Dropout		| Keep probability = 0.5        									|
 | Fully Connected				| Input = 1080, Output = 120        									|
 | RELU					|	Activation Function											|
