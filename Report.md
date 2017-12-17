@@ -1,8 +1,5 @@
 # **Traffic Sign Classifier** 
 ------------------------------------
-## Overview
------------
-The Purpose of this project is to build a deep neural network based on a modified version of Lenet architecture that will be able to recognize German Traffic Signs.
 
 ## Traffic Sign Classifier Project
 ----------------------------------
@@ -35,11 +32,11 @@ The Purpose of this project is to build a deep neural network based on a modifie
 [image12]: ./examples/12.Plot_Top_5_Softmax_Probabilities.png
 
 ### 1. Load the Data
------------------
+---------------------
 I have seprated the training, validation and testing data set in 3 different folders and then loaded them using pickle python library in the following train,valid and test. then I separate the data into features and labels.
 
 ### 2. Data Set Summary & Exploration
-----------------------------------
+--------------------------------------
 
 **Basic summary of the data set:**
 
@@ -55,11 +52,25 @@ signs data set:
 
 **Visualization of the dataset:**
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. I have plotted a sample of each image to identify what each label refers to:
 
 ![alt text][image1]
 
-### Design and Test a Model Architecture
+Here's a bar chart showing the count of each image in the training set Data:
+
+![alt text][image2]
+
+Here's a bar chart showing the count of each image in the Validation set Data:
+
+![alt text][image3]
+
+Here's a bar chart showing the count of each image in the Testing set Data:
+
+![alt text][image4]
+
+
+### 3. Design and Test a Model Architecture
+--------------------------------------------
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
@@ -67,7 +78,7 @@ As a first step, I decided to convert the images to grayscale because ...
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+
 
 As a last step, I normalized the image data because ...
 
