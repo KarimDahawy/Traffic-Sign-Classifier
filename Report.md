@@ -182,8 +182,8 @@ Here are the results of the prediction:
 | Keep right			| Keep right      							|
 | Roundabout mandatory			| Roundabout mandatory      							|
 | Speed limit (80km/h)			| Speed limit (80km/h)      							|
-| End of speed limit (80km/h)			| Speed limitt (30km/h)      							|
-| Speed limit (100km/h)			| Speed limit (30km/h)      							|
+| **End of speed limit (80km/h)			| Speed limitt (30km/h)      							|
+| **Speed limit (100km/h)			| Speed limit (30km/h)**      							|
 | No passing			| No passing      							|
 
 
