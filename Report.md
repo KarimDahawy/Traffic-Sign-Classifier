@@ -28,7 +28,7 @@
 [image8]: ./examples/8.Training_Accuracy_Vs_Validation_Accuracy.png
 [image9]: ./examples/9.New_Loaded_images.png
 [image10]: ./examples/10.Preprocessed_new_loaded_images.png
-[image11]: ./examples/11.Top_5_Softmax_Probabilities.png
+[image11]: ./examples/11.Top-5_Softmax_Probabilities.png
 [image12]: ./examples/12.Plot_Top_5_Softmax_Probabilities.png
 
 ### 1. Load the Data
@@ -121,7 +121,7 @@ My final model consisted of the following layers:
 | Fully Connected				| Input = 84, Output = 43        									|
 
 
-**Train the Model**
+**Train the Model:**
 
 I have used the following parameters in order to train my model:
 
@@ -134,7 +134,7 @@ I have used the following parameters in order to train my model:
 5. Dropout with keep_prob = **0.5**
 
 
-**Model Solution Approach**
+**Model Solution Approach:**
 
 First I have used LeNet architecture in order to build my pipeline, but as the validation accuracy given by LeNet was below 93%, I have made some modifications to LeNet so the validation accracy will be Higher.
 
@@ -152,13 +152,14 @@ A Chart to identify the training accuracy versus validation accuracy
 ### 4. Test a Model on New Images:
 ----------------------------------
 
-**New Images for German Traffic Signs**
-
-![alt text][image9]
+**New Images for German Traffic Signs:**
 
 I have loaded 21 images in order to fully test the model for different types of signs.
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+![alt text][image9]
+
+
+**The model's predictions:**
 
 Here are the results of the prediction:
 
@@ -187,11 +188,15 @@ Here are the results of the prediction:
 | No passing			| No passing      							|
 
 
-The model was able to correctly guess 19 of the 21 traffic signs, which gives an accuracy of 90.476%.
+The model was able to correctly guess 19 of the 21 traffic signs, which gives an accuracy of 90.476%. The model has miss classifeied **End of speed limit (80km/h)**) and **Speed limit (100km/h)**	by **Speed limitt (30km/h)**
 
-#### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+### 5. softmax probabilities for each prediction:
+--------------------------------------------------
+Here's an image which identifies each input image and the predicted image from the neural network with the top five softmax out plotted above each one.
 
 ![alt text][image11]
 
-![alt text][image12]
 
+Here's a bar chart for each image and the corresponding top five softmax probabilities.
+
+![alt text][image12]
